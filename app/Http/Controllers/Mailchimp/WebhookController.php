@@ -14,5 +14,7 @@ class WebhookController extends Controller
         $mailchimp = new MailchimpWebhook();
         $mailchimp->reason = $data;
         $mailchimp->save();
+
+        return 'success';
     }
 }
