@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/blogtest', function () {
     return view('blog');
 });
+
+Route::get('/mailchimp/webhook', function () {
+    return 'good';
+});
