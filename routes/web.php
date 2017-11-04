@@ -19,6 +19,4 @@ Route::get('/blogtest', function () {
     return view('blog');
 });
 
-Route::get('/mailchimp/webhook', function () {
-    return 'good';
-});
+Route::post('/mailchimp/webhook', 'Mailchimp\WebhookController@index');
