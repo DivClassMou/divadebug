@@ -25,8 +25,8 @@ class WebhookController extends Controller
 //        $mailchimp->web_id = $data['data']['web_id'];
         $mailchimp->list_id = $data['data']['list_id'];
         $mailchimp->merges_email = $data['data']['merges']['EMAIL'];
-        $mailchimp->merges_interests = $data['data']['merges']['INTEREST'];
-        $mailchimp->merges_purpose = $data['data']['merges']['PURPOSE'];
+        $mailchimp->merges_interests = iconv('ASCII', 'UTF-8//IGNORE', $data['data']['merges']['INTEREST']);
+        $mailchimp->merges_purpose = iconv('ASCII', 'UTF-8//IGNORE', $data['data']['merges']['PURPOSE']);
         $mailchimp->merges_url = $data['data']['merges']['URL'];
 
         $mailchimpType = $data['type'];
