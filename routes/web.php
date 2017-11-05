@@ -19,4 +19,5 @@ Route::get('/blogtest', function () {
     return view('blog');
 });
 
+Route::get('/mailchimp/webhook', 'Mailchimp\WebhookController@index');
 Route::post('/mailchimp/webhook', 'Mailchimp\WebhookController@index');
