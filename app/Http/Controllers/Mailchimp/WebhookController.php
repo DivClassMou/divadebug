@@ -22,7 +22,7 @@ class WebhookController extends Controller
         $mailchimp->email = $data['data']['email'];
         $mailchimp->email_type = $data['data']['email_type'];
         $mailchimp->ip_opt = $data['data']['ip_opt'];
-        $mailchimp->web_id = $data['data']['web_id'];
+//        $mailchimp->web_id = $data['data']['web_id'];
         $mailchimp->list_id = $data['data']['list_id'];
         $mailchimp->merges_email = $data['data']['merges']['EMAIL'];
         $mailchimp->merges_interests = $data['data']['merges']['INTEREST'];
