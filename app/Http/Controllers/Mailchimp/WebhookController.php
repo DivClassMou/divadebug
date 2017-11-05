@@ -32,9 +32,9 @@ class WebhookController extends Controller
         $mailchimpType = $data['type'];
 
         if ($mailchimpType == self::MAILCHIMP_TYPE_SUBSCRIPTION) {
-            $mailchimp->ip_signup = $data->data->ip_signup;
+            $mailchimp->ip_signup = $data['data']['ip_signup'];
         } else if ($mailchimpType == self::MAILCHIMP_TYPE_UNSUBSCRIPTION) {
-            $mailchimp->reason = $data->data->reason;
+            $mailchimp->reason = $data['data']['reason'];
         }
 
         $mailchimp->save();
